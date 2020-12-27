@@ -1,0 +1,4 @@
+api:
+  # 天天基金单个基金净值详情
+  dayfund:
+    networth: http://fundgz.1234567.com.cn/js/{}.js
