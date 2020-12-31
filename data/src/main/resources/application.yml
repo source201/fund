@@ -1,3 +1,5 @@
+server:
+  port: 8080
 api:
   # 天天基金单个基金净值详情
   dayfund:

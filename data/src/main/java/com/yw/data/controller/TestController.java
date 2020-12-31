@@ -16,4 +16,9 @@ public class TestController {
     public void loadNetWorth(String fundcode){
         loadDataService.getFundNetWorth(fundcode);
     }
+
+    @GetMapping("/hello")
+    public String helloWorld(){
+        return "hello yw";
+    }
 }
