@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateConfig {
 
     @Bean
-    public RestTemplate getRestTemplate(ClientHttpRequestFactory factory){
+    public RestTemplate getRestTemplate(ClientHttpRequestFactory factory) {
         return new RestTemplate(factory);
     }
 

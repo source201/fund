@@ -39,7 +39,8 @@ public class JsonUtil<T> {
             return null;
         }
         try {
-            return obj instanceof String ? (String) obj : objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
+            return obj instanceof String ? (String) obj : objectMapper.writerWithDefaultPrettyPrinter()
+                    .writeValueAsString(obj);
         } catch (JsonProcessingException e) {
             log.warn("Parse Object to String error : {}", e.getMessage());
             return null;
@@ -52,8 +53,8 @@ public class JsonUtil<T> {
      * @param clazz 自定义对象的class对象
      * @return 自定义对象
      */
-    public static <T> T string2Obj(String str, Class<T> clazz){
-        if(StrUtil.isBlank(str) || clazz == null){
+    public static <T> T string2Obj(String str, Class<T> clazz) {
+        if (StrUtil.isBlank(str) || clazz == null) {
             return null;
         }
         try {

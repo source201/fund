@@ -24,6 +24,6 @@ public class OptionalFundJobHandler implements Job {
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         Date time = new Date();
         loadDataService.getFundNetWorth("320007");
-        log.info("时间：{}，打印",time);
+        log.info("时间：{}，打印", time);
     }
 }

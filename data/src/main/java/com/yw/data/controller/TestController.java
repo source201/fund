@@ -13,12 +13,12 @@ public class TestController {
     private LoadDataService loadDataService;
 
     @GetMapping("/loadNetWorth")
-    public void loadNetWorth(String fundcode){
+    public void loadNetWorth(String fundcode) {
         loadDataService.getFundNetWorth(fundcode);
     }
 
     @GetMapping("/hello")
-    public String helloWorld(){
+    public String helloWorld() {
         return "hello yw";
     }
 }

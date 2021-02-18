@@ -39,7 +39,7 @@ public class LoadDataServiceImpl implements LoadDataService {
         responStr = restTemplate.getForObject(apiUrl, String.class);
 
         String str1 = new String(responStr.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
-        FundNetWorthBO fundNetWorthBO =handleGSJZData(str1);
+        FundNetWorthBO fundNetWorthBO = handleGSJZData(str1);
         log.info("净值详情：{}", fundNetWorthBO);
     }
 
@@ -51,7 +51,7 @@ public class LoadDataServiceImpl implements LoadDataService {
         FundNetWorthBO fundNetWorthBO = null;
         if (start < end && start > 0) {
             String jsonData = data.substring(start + 1, end);
-            fundNetWorthBO = JsonUtil.string2Obj(jsonData,FundNetWorthBO.class);
+            fundNetWorthBO = JsonUtil.string2Obj(jsonData, FundNetWorthBO.class);
         }
         return fundNetWorthBO;
     }

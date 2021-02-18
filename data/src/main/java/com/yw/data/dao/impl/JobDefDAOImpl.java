@@ -22,7 +22,7 @@ import java.util.List;
 @Slf4j
 public class JobDefDAOImpl extends ServiceImpl<JobDefMapper, JobDefPO> implements JobDefDAO {
 
-    
+
     @Override
     public List<JobDefPO> listAll() {
         List<JobDefPO> result = null;
